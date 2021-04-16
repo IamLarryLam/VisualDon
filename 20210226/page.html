@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>SVG</title>
+    <meta name="description" content="SVG">
+    <meta name="author" content="Larry">
+
+    <style>
+
+        @keyframes animate {
+            from {
+                fill: red;
+                stroke: blue;
+            }
+
+            to {
+                fill: blue;
+                stroke: red;
+            }
+        }
+
+        #circle {
+
+            animation-duration: 2s;
+            animation-name: animate;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="20" fill="red" stroke="blue" stroke-width="5" id="circle" />
+    </svg>
+
+</body>
+
+<script>
+    let isLarge = true
+
+    document.querySelector("#circle").addEventListener('click', () => {
+        document.querySelector("#circle").setAttribute('stroke-width', isLarge ? '15' : '5')
+        isLarge=!isLarge;
+        console.log("hey");
+        
+    })
+</script>
+
+</html>
