@@ -2,7 +2,7 @@
 
 ## 16 avril
 
-Nous allons collaborer ensemble avec Leyla Benkais pour ce projet.
+Je vais réaliser ce projet avec Leyla Benkais.
 
 ## 23 avril
 
