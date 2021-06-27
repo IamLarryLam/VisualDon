@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+</head>
+<style>
+    .background-dark {
+        background-color: #192535;
+    }
+    
+    .car svg {
+        transform: rotate(90deg);
+    }
+    
+    text {
+        color: #fff;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body class="background-dark text-light">
+
+    <div class="container py-5">
+        <div class="row text-center mb-5">
+            <div class="col-sm-8 mx-auto">
+                <h1>CarViz - A data vizualisation project</h1>
+                <p class="mt-3">L'idée de ce projet était de faire de l'exploration design au niveau de la visualisation de données. Nous sommes partis pour cette première illustration sur un graphique en barre et y avons apondu un design de voiture qui est généré à
+                    partir de path uniques. L'effet de "vitesse" sont illustrés à travers ces deux bandes colorés qui pourrait systhéthiser les voitures qui driftent. Cet effet a été réalisé en superposant un rectangle sur l'autre.</p>
+                <p><i>Attention le temps affiché est un calcul fictif pour calculer le 0 à 100km/h. L'idée était de pouvoir récupérer les données de poids, puissance pour en faire un calcul et y afficher le resultat.</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="graph"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5">
+        <div class="row text-center mb-5">
+            <div class="col-sm-8 mx-auto">
+                <h3>Porsche 911 Carrera S</h3>
+                <p class="mt-3"><i>Viouuuum....</i></p>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5" id="scroll">
+        <div class="row">
+            <div class="col" style="overflow: hidden;"><img id="car" style="
+                position: relative;width: 400px;left: -500px;" src="./svg/car_horizontal.png" alt="" srcset=""></div>
+        </div>
+    </div>
+    <div class="container pt-5">
+        <div class="row text-center mt-5">
+            <div class="col-sm-8 mx-auto">
+                <h1>Force directed graph</h1>
+                <p class="mt-3">Le challenge ici était de faire une visualisation de données intéractive, nous avons utilisé la librairie
+                    <a href="https://www.amcharts.com/">AMCHARTS</a> pour réaliser ce graph de type "FORCE DIRECTED".</p>
+                <p>Nous avons réussi à mettre en place une méthode récursive qui parcourt le tableau de données tant que le constructeur a des éléments enfants afin d'y rajouter des coulurs personnalisées en fonction du niveau de hiérarchie. Par des soucis
+                    de temps et de priorités, nous n'avons pas intégré les données depuis un fichier JSON externe mais depuis une variable JS directement.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container " id="force-directed" style="height: 100vh;">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-8 mx-auto">
+                <h6>^Cliquer au dessus pour pouvoir toggle l'affichage des constructeurs^</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5" style="height:30vh;">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1-jquery.min.js"></script>
+<script src="build/bundle.js"></script>
+
+
+</html>
