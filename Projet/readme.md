@@ -56,3 +56,23 @@ Voici la liste des types de données qui viennent de notre dataset :
 - consommation en ville : en continu de 13 à 49
 - consommation sur autoroute : en continu de 16 à 54
 - prix : continu de 5118 à 45400.
+
+## 13 juin
+
+Création du prepare.js qui va trier et nommer les attributs
+
+Affichage d'un graphique en baton depuis les chevaux des voitures
+
+## 18 juin
+
+Ajout des voitures en svg au graph
+
+## 23 juin
+
+Ajout des labels qui calculent fictivement le temps en s du 0 à 100  par rapport au poids et aux chevaux.
+
+## 28 juin
+
+Création de la voiture qui se déplace horizontalement en fonction de la position du scroll
+
+Création du schema force directed
